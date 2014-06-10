@@ -1,0 +1,15 @@
+{
+  "name": "dominicbarnes-form",
+  "version": "0.0.1",
+  "dependencies": {
+    "component": "1",
+    "component-test": "*"
+  },
+  "scripts": {
+    "postinstall": "component install --dev",
+    "build": "component build --dev",
+    "pretest": "npm run build",
+    "test": "component test phantom",
+    "start": "component test browser"
+  }
+}
