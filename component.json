@@ -1,0 +1,31 @@
+{
+  "name": "form",
+  "repository": "dominicbarnes/form",
+  "version": "0.0.2",
+  "license": "MIT",
+  "description": "A helper for working with HTML forms",
+  "keywords": [
+    "forms",
+    "inputs",
+    "helper",
+    "serialize",
+    "value"
+  ],
+  "dependencies": {
+    "component/value": "*",
+    "dominicbarnes/form-element": "*",
+    "dominicbarnes/form-serialize": "*"
+  },
+  "development": {
+    "dependencies": {
+      "component/assert": "*",
+      "component/domify": "*"
+    },
+    "templates": [
+      "test/simple.html"
+    ]
+  },
+  "scripts": [
+    "index.js"
+  ]
+}
