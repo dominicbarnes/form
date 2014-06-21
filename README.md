@@ -2,6 +2,7 @@
 
 A helper for working with HTML forms, contains the functionality of:
 
+ * [component/classes](https://github.com/component/classes)
  * [component/value](https://github.com/component/value)
  * [dominicbarnes/form-element](https://github.com/dominicbarnes/form-element)
  * [dominicbarnes/form-serialize](https://github.com/dominicbarnes/form-serialize)
@@ -61,3 +62,7 @@ Gets or sets the value for the input matching `name`
 
 Serializes the entire form into a single JS object.
 (see [dominicbarnes/form-serialize](https://github.com/dominicbarnes/form-serialize))
+
+### Form#classes
+
+A CSS class helper via [component/classes](https://github.com/component/classes).

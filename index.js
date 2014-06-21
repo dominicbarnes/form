@@ -1,4 +1,5 @@
 // dependencies
+var classes = require("classes");
 var formElement = require("form-element");
 var serialize = require("form-serialize");
 var value = require("value");
@@ -20,6 +21,7 @@ function Form(el) {
     }
 
     this.element = el;
+    this.classes = classes(this.element);
 }
 
 

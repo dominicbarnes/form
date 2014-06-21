@@ -18,6 +18,10 @@ describe("Form(el)", function () {
     it("should not require the new keyword", function () {
         assert(form instanceof Form);
     });
+
+    it("should set up the classes helper automatically", function () {
+        assert(form.classes.add && form.classes.remove);
+    });
 });
 
 describe("Form#input(name)", function () {
