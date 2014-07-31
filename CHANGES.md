@@ -1,4 +1,7 @@
 
+# 0.2.1 (7/31/2014)
+ * allowing wider semver ranges (`~` instead of `^`) for my own deps
+
 # 0.2.0 (7/31/2014)
  * updates [form-serialize](https://github.com/dominicbarnes/form-serialize) and gets square-bracket notation support
 
