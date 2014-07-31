@@ -1,4 +1,8 @@
-# 0.1.2
+
+# 0.2.0 (7/31/2014)
+* updates [form-serialize](https://github.com/dominicbarnes/form-serialize) and gets square-bracket notation support
+
+# 0.1.2 (7/31/2014)
  * reverts [form-serialize](https://github.com/dominicbarnes/form-serialize) temporarilly (to address regression)
  * properly handles the `transformer` param for `Form#serialize()`
 

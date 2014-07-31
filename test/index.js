@@ -2,6 +2,8 @@ var assert = require("assert");
 var domify = require("domify");
 var Form = require("form");
 var simple = require("form/test/simple.html");
+var nested = require("form/test/nested.html");
+
 
 describe("Form(el)", function () {
     var el = domify(simple);
@@ -84,6 +86,19 @@ describe("Form#serialize()", function () {
         assert.deepEqual(o, {
             input1: "foo",
             input3: "foo"
+        });
+    });
+
+    it("should support square-bracket notation", function () {
+        var el = domify(nested);
+        var form = Form(el);
+
+        assert.deepEqual(form.serialize(), {
+            user: {
+                name: "testuser",
+                phone: "123-456-7890",
+                email: "test@example.com"
+            }
         });
     });
 });
