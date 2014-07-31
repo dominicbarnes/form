@@ -26,15 +26,24 @@ function Form(el) {
 
 
 /**
- * Retrieves an input from the form by name
+ * Retrieves an input from the form by name. If 2 arguments are passed,
+ * the first is assumed to be the name of a `<fieldset>`. (which allows
+ * only retrieving from a specific subset of elements)
  *
  * @see http://github.com/dominicbarnes/form-element
  *
+ * @param {String} [fieldset]  Only search for controls in the named fieldset
  * @param {String} name
  * @returns {HTMLElement}
  */
-Form.prototype.input = function (name) {
-    return formElement(this.element, name);
+Form.prototype.input = function (fieldset, name) {
+    if (!name) {
+        name = fieldset;
+        fieldset = null;
+    }
+
+    var el = fieldset ? formElement(this.element, fieldset) : this.element;
+    return formElement(el, name);
 };
 
 
@@ -59,8 +68,10 @@ Form.prototype.value = function (name, val) {
  *
  * @see https://github.com/dominicbarnes/serialize
  *
+ * @param {String} [fieldset]  Only serialize the controls in the named fieldset
  * @returns {Object}
  */
-Form.prototype.serialize = function (loose) {
-    return serialize(this.element, loose);
+Form.prototype.serialize = function (fieldset) {
+    var el = fieldset ? formElement(this.element, fieldset) : this.element;
+    return serialize(el);
 };
