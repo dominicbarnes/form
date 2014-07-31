@@ -1,4 +1,9 @@
 
+# 0.1.0 (7/31/2014)
+ * updates [form-serialize](https://github.com/dominicbarnes/form-serialize) and drops `loose` parameter
+ * added ability for `Form#input()` and `Form#serialize()` to filter by `<fieldset name="...">`
+ * pinning dependencies to specific semver ranges (instead of `*`)
+
 # 0.0.2 (6/21/2014)
  * added [classes](https://github.com/component/classes) helper
 
