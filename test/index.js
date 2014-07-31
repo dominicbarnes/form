@@ -41,24 +41,26 @@ describe("Form#value(name)", function () {
 
     it("should set the value of the username field", function () {
         var form = Form(domify(simple));
-        form.value("username", "testuser")
+        form.value("username", "testuser");
         assert.equal(form.value("username"), "testuser");
     });
 });
 
-describe("Form#serialize([loose])", function () {
+describe("Form#serialize()", function () {
     var form = Form(domify(simple));
 
     it("should serialize the valid fields", function () {
         assert.deepEqual(form.serialize(), {
-            username: "dominicbarnes"
+            username: "dominicbarnes",
+            input1: "1",
+            input3: "3"
         });
     });
 
-    it("should include disabled fields", function () {
-        assert.deepEqual(form.serialize(true), {
-            username: "dominicbarnes",
-            password: "123456"
+    it("should return only the controls in the group1 fieldset", function () {
+        assert.deepEqual(form.serialize("group1"), {
+            input1: "1",
+            input3: "3"
         });
     });
 });
