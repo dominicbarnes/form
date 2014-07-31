@@ -15,7 +15,7 @@
     "component/classes": "^1.2.1",
     "component/value": "^1.1.0",
     "dominicbarnes/form-element": "^0.1.1",
-    "dominicbarnes/form-serialize": "^0.4.0"
+    "dominicbarnes/form-serialize": "^0.3.1"
   },
   "development": {
     "dependencies": {
