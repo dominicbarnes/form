@@ -1,6 +1,6 @@
 {
   "name": "dominicbarnes-form",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "dependencies": {
     "component": "1",
     "component-test": "*"
