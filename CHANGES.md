@@ -1,4 +1,7 @@
 
+# 0.1.1 (7/31/2014)
+ * updates [form-serialize](https://github.com/dominicbarnes/form-serialize) and gets square-bracket notation support
+
 # 0.1.0 (7/31/2014)
  * updates [form-serialize](https://github.com/dominicbarnes/form-serialize) and drops `loose` parameter
  * added ability for `Form#input()` and `Form#serialize()` to filter by `<fieldset name="...">`
