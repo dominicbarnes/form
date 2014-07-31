@@ -63,4 +63,27 @@ describe("Form#serialize()", function () {
             input3: "3"
         });
     });
+
+    it("should apply the transformer function", function () {
+        var o = form.serialize(function (key, value, el) {
+            return "foo";
+        });
+
+        assert.deepEqual(o, {
+            username: "foo",
+            input1: "foo",
+            input3: "foo"
+        });
+    });
+
+    it("should apply the transformer function for the specified fieldset", function () {
+        var o = form.serialize("group1", function (key, value, el) {
+            return "foo";
+        });
+
+        assert.deepEqual(o, {
+            input1: "foo",
+            input3: "foo"
+        });
+    });
 });
