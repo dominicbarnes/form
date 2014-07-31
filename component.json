@@ -23,7 +23,7 @@
       "component/domify": "*"
     },
     "templates": [
-      "test/simple.html"
+      "test/*.html"
     ]
   },
   "scripts": [
