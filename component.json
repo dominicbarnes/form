@@ -1,7 +1,7 @@
 {
   "name": "form",
   "repository": "dominicbarnes/form",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "A helper for working with HTML forms",
   "keywords": [
