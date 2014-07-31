@@ -66,12 +66,19 @@ Form.prototype.value = function (name, val) {
 /**
  * Serializes all the inputs of a form into a single JS object
  *
- * @see https://github.com/dominicbarnes/serialize
+ * @see https://github.com/dominicbarnes/form-serialize
  *
- * @param {String} [fieldset]  Only serialize the controls in the named fieldset
+ * @param {String} [fieldset]       Only serialize the controls in the named fieldset
+ * @param {Function} [transformer]  Apply an interceptor function to the serializer
  * @returns {Object}
  */
-Form.prototype.serialize = function (fieldset) {
+Form.prototype.serialize = function (fieldset, transformer) {
+    if (typeof fieldset === "function") {
+        transformer = fieldset;
+        fieldset = null;
+    }
+
     var el = fieldset ? formElement(this.element, fieldset) : this.element;
-    return serialize(el);
+
+    return serialize(el, transformer);
 };
